@@ -9,6 +9,8 @@ namespace TicTacToe
             Console.WriteLine("\t\t\t\t\t This Is A TicTacToe Game Problem");
             TicTacToeGame ticTacToeGame = new TicTacToeGame();
             ticTacToeGame.InitializeBoard();
+            ticTacToeGame.ChooseOption();
+           
         }
     }
 }
