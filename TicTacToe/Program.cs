@@ -11,7 +11,7 @@ namespace TicTacToe
             TicTacToeGame ticTacToeGame = new TicTacToeGame();
             ticTacToeGame.InitializeBoard();
             //UC2
-            ticTacToeGame.ChooseOption();
+            //ticTacToeGame.ChooseOption();
             //UC3
             ticTacToeGame.ShowBoard();
 

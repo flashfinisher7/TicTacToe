@@ -7,52 +7,36 @@ namespace TicTacToe
 
     class TicTacToeGame
     {
-
-        public char player;
-        public char computer;
-        //UC1
+        public char[] board { get; set; }
+        public char player = ' ';
+        public char computer = ' ';
+        
         public void InitializeBoard()
         {
-            char[] board = new char[10];
+            board = new char[10];
 
             for (int i = 1; i < 10; i++)
                 board[i] = ' ';
         }
-        //UC2
-        public void ChooseOption()
+        
+        public char ChooseOption()
         {
             Console.Write("Choose X or O : ");
-            
-            char input = Convert.ToChar(Console.ReadLine());
-            //if player selects X
-            if (input == 'X')
-            {
-                player = 'X';
-                computer = 'O';
-            }
-            //if player selects O
-            else if (input == 'O')
-            {
-                computer = 'O';
-                player = 'X';
-            }
-            else
-            {
-                Console.WriteLine("Invalid player input");
-            }
+            var input = Convert.ToChar(Console.ReadLine());
+
+            return (input == 'X' || input == 'O') ? input : ChooseOption();
         }
-        //UC3
+        
         public void ShowBoard()
         {
-            Console.WriteLine(" "+ "\t|" + "\t|");
+            Console.WriteLine("" + board[1] + "\t|" + board[2] + "\t|" + board[3]);
             Console.WriteLine("--------------------------");
-            Console.WriteLine(" "+ "\t|" +"\t|" );
+            Console.WriteLine("" + board[4] + "\t|" + board[5] + "\t|" + board[6]);
             Console.WriteLine("--------------------------");
-            Console.WriteLine(" "+ "\t|" +"\t|" );
+            Console.WriteLine("" + board[7] + "\t|" + board[8] + "\t|" + board[9]);
 
 
         }
+
     }
-
 }
-
