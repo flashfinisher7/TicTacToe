@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace TicTacToe
 {
-    class TicTacToeGame
+    public class TicTacToeGame
     {
+        public void InitializeBoard()
+        {
+            char[] board = new char[10];
+
+            for (int i = 1; i < 10; i++)
+                board[i] = ' ';
+        }
+
     }
 }
